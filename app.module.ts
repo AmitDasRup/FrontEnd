@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlbumComponent } from './album/album.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 /* Firebase services */
 import { AngularFireModule } from "@angular/fire";
@@ -13,16 +16,30 @@ import { environment } from '../environments/environment';
 
 /* Auth service */
 import { AuthenticationService } from './shared/authentication.service';
+import { UploadPhotosComponent } from './upload-photos/upload-photos.component';
+import { AlbumDetailsComponent } from './album-details/album-details.component';
+import { CreateAlbumComponent } from './create-album/create-album.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FeedComponent } from './feed/feed.component';
+import { PhotoComponent } from './photo/photo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumComponent
+    AlbumComponent,
+    UploadPhotosComponent,
+    AlbumDetailsComponent,
+    CreateAlbumComponent,
+    ProfileComponent,
+    FeedComponent,
+    PhotoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    AngularFileUploaderModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],

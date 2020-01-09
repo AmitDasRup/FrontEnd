@@ -10,8 +10,6 @@
   <button (click)="signIn()">Login</button>
 </div>
 
-<button (click)="signOut()" *ngIf="authenticationService.userData | async">Logout</button>
-
 <div *ngIf="authenticationService.userData | async">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +24,7 @@
           <a class="nav-link" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" [routerLink]="['/profile/me']">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/album']">Albums</a>

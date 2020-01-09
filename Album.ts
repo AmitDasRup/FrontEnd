@@ -1,6 +1,8 @@
 export class Album{
-id:string;
-name:string;
-coverPhotoUrl:string;
+id: string;
+title: string;
+coverPhotoUrl: string;
+creationDate: string;
+createdBy: string;
 
 }
