@@ -15,13 +15,14 @@ export class AuthenticationService {
     this.userData.subscribe(
     user => this.SaveIdTokenInLocalStorage(user.getIdToken()),
     err => console.error('userData got an error: ' + err),
-    () => console.log('Observer got a complete notification')
+    () => console.log('userData got a complete notification')
 );
   }
 
   SaveIdTokenInLocalStorage(idToken){
     idToken.then( value => {
-      localStorage.setItem('idtoken', value);
+      console.log("Got the Id Token", value);
+      localStorage.setItem('idToken', value);
     });
   }
 
