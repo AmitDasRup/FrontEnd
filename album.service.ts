@@ -54,7 +54,7 @@ export class AlbumService {
 
   public getAlbumDetails(id){
     var headers = this.getHeaders();
-    return this.http.get(this.apiBaseUrl + "/albums"+id+"/photos", {headers})
+    return this.http.get(this.apiBaseUrl + "/albums/"+id+"/photos", {headers})
     //console.log('Album id for individual album call', id);
   }
 
